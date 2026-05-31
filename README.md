@@ -1,7 +1,8 @@
 # Delivery Connect for BAS
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Platform: BAF / 1C 8.3](https://img.shields.io/badge/Platform-BAF%20%7C%201C%208.3-yellow.svg)]()
+![Platform: BAF / 1C 8.3](https://img.shields.io/badge/Platform-BAF%20%7C%201C%208.3-yellow.svg)
+[![Latest release](https://img.shields.io/github/v/release/DeliveryLTD/bas-module)](https://github.com/DeliveryLTD/bas-module/releases/latest)
 [![Delivery Auto API](https://img.shields.io/badge/API-Delivery%20Auto%20v4-black.svg)](https://delivery-auto.com.ua)
 
 > Інтеграція облікових систем **BAS / BAF / 1С:Підприємство** з API служби доставки **Delivery Auto** — оформлення, розрахунок і відстеження доставок прямо з вашої облікової системи.
@@ -58,7 +59,7 @@
 
 ### Встановлення
 
-1. Завантажте `DeliveryConnect-BAS.epf` з [релізів](../../releases) або репозиторію
+1. Завантажте `DeliveryConnect-BAS.epf` з [релізів](https://github.com/DeliveryLTD/bas-module/releases/latest) або репозиторію
 2. У вашій БАС/1С: **Файл → Відкрити** → оберіть `DeliveryConnect-BAS.epf`
 3. Натисніть **Налаштування** → введіть **API-ключ** і **секретний ключ** (отримати в [особистому кабінеті Delivery Auto](https://delivery-auto.com.ua)), а також логін/пароль кабінету
 4. **Перевірити з'єднання** — має показати ваше ім'я та ID клієнта
@@ -141,7 +142,7 @@ An external data processor (`.epf`) for the BAF / 1C:Enterprise 8.3 platform tha
 
 ### Installation
 
-1. Download `DeliveryConnect-BAS.epf` from [releases](../../releases) or the repository
+1. Download `DeliveryConnect-BAS.epf` from [releases](https://github.com/DeliveryLTD/bas-module/releases/latest) or the repository
 2. In your BAS/1C: **File → Open** → select `DeliveryConnect-BAS.epf`
 3. Click **Settings** → enter your **API key** and **secret key** (get them in the [Delivery Auto cabinet](https://delivery-auto.com.ua)), plus cabinet login/password
 4. **Check connection** — it should show your name and client ID

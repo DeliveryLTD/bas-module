@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/DeliveryLTD/bas-module/blob/main/SECURITY.md
+    about: Do not open public issues for security problems — see the security policy.
+  - name: Support & contact
+    url: https://github.com/DeliveryLTD/bas-module/blob/main/SUPPORT.md
+    about: Support channels and scope.

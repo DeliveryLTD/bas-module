@@ -10,10 +10,8 @@ Official releases of **Delivery Connect for BAS** are maintained by the Delivery
 
 ## Scope
 
-| | |
-|---|---|
-| **Official releases** | Supported by the Delivery Auto IT team. |
-| **Customer-modified forks** | Supported on a **best-effort** basis. |
+- **Official releases** — supported by the Delivery Auto IT team.
+- **Customer-modified forks** — supported on a **best-effort** basis.
 
 ## Please do not publish secrets
 

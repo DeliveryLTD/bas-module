@@ -3,6 +3,21 @@
 All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.0.2] - 2026-06-01
+
+### Added
+- In-processor version display — an **"Про програму"** window (version, copyright,
+  support email, license) on both regular and managed forms.
+- `ВерсияОбработки()` / `ТекстПроПрограмму()` in the object module — single source
+  of truth for the version (kept in sync with the GitHub release).
+- `.github/ISSUE_TEMPLATE/config.yml` — disables blank issues, links to SECURITY / SUPPORT.
+- Latest-release badge in README.
+
+### Changed
+- README: fixed the platform badge (removed empty link), absolute links to releases.
+- SUPPORT.md: Scope rendered as a list instead of a table.
+- User guide: added a "do not publish secrets" warning next to Issues.
+
 ## [1.0.1] - 2026-05-31
 
 ### Changed
