@@ -49,15 +49,27 @@
 - Робота через `ЗащищенноеСоединениеOpenSSL` (HTTPS)
 - Жовто-чорний корпоративний стиль Delivery
 
+### Вимоги
+
+- **Платформа:** BAF 8.3.19+ або 1С:Підприємство 8.3.x
+- **З'єднання:** доступ до інтернету через HTTPS (OpenSSL)
+- **Доступ:** право запуску зовнішніх обробок у вашій базі
+- **Обліковий запис Delivery Auto:** логін/пароль кабінету + API-ключ і секретний ключ
+
 ### Встановлення
 
-1. Завантажте `ДеливериAPI.epf` з [релізів](../../releases) або репозиторію
-2. У вашій БАС/1С: **Файл → Відкрити** → оберіть `ДеливериAPI.epf`
+1. Завантажте `DeliveryConnect-BAS.epf` з [релізів](../../releases) або репозиторію
+2. У вашій БАС/1С: **Файл → Відкрити** → оберіть `DeliveryConnect-BAS.epf`
 3. Натисніть **Налаштування** → введіть **API-ключ** і **секретний ключ** (отримати в [особистому кабінеті Delivery Auto](https://delivery-auto.com.ua)), а також логін/пароль кабінету
 4. **Перевірити з'єднання** — має показати ваше ім'я та ID клієнта
 5. Готово — оформлюйте квитанції 🚚
 
 📖 **Детальна інструкція користувача:** [docs/Інструкція_користувача.md](docs/Інструкція_користувача.md)
+
+### Обмеження
+
+- Протестовано на вказаних конфігураціях (БАС УТП 1.2, БАС Бухгалтерія 2.1). Для **суттєво доопрацьованих** баз може знадобитися адаптація імен документів-підстав.
+- Накладений платіж — лише тип «розрахунковий рахунок».
 
 ### ⚠️ Безпека
 
@@ -66,6 +78,12 @@ API-ключі, секретний ключ і пароль зберігають
 **Це прийнятно** за умови спільних ключів компанії та довірених співробітників. Для **суворих середовищ**:
 - обмежте доступ до обробки ролями, **АБО**
 - замініть `ХранилищеОбщихНастроек` на `ХранилищеНастроекПользователя` у функції `ПрочитатьНастройки()` модуля об'єкта (єдина точка зміни) та в `СохранитьНастройки()`.
+
+> 📋 Політика безпеки та звітування про вразливості — [SECURITY.md](SECURITY.md).
+
+### Підтримка
+
+Офіційні релізи супроводжує IT-команда Delivery Auto. Канали зв'язку та межі підтримки (зокрема best-effort для форків) — у [SUPPORT.md](SUPPORT.md).
 
 ### Кастомізація
 
@@ -114,13 +132,25 @@ An external data processor (`.epf`) for the BAF / 1C:Enterprise 8.3 platform tha
 - Works over `OpenSSL secure connection` (HTTPS)
 - Delivery yellow-and-black corporate styling
 
+### Requirements
+
+- **Platform:** BAF 8.3.19+ or 1C:Enterprise 8.3.x
+- **Connection:** internet access over HTTPS (OpenSSL)
+- **Access:** the right to run external data processors in your database
+- **Delivery Auto account:** cabinet login/password + API key and secret key
+
 ### Installation
 
-1. Download `ДеливериAPI.epf` from [releases](../../releases) or the repository
-2. In your BAS/1C: **File → Open** → select `ДеливериAPI.epf`
+1. Download `DeliveryConnect-BAS.epf` from [releases](../../releases) or the repository
+2. In your BAS/1C: **File → Open** → select `DeliveryConnect-BAS.epf`
 3. Click **Settings** → enter your **API key** and **secret key** (get them in the [Delivery Auto cabinet](https://delivery-auto.com.ua)), plus cabinet login/password
 4. **Check connection** — it should show your name and client ID
 5. Done — start creating waybills 🚚
+
+### Limitations
+
+- Tested on the listed configurations (BAS Trade Management 1.2, BAS Accounting 2.1). **Heavily customized** databases may require adapting the source-document names.
+- Cash on delivery — bank-account type only.
 
 ### ⚠️ Security
 
@@ -129,6 +159,12 @@ API keys, secret key and password are stored in `CommonSettingsStorage` — a **
 **This is acceptable** with shared company keys and trusted employees. For **strict environments**:
 - restrict access to the processor via roles, **OR**
 - replace `CommonSettingsStorage` with `UserSettingsStorage` in the `ПрочитатьНастройки()` (ReadSettings) function of the object module (single point of change) and in `СохранитьНастройки()` (SaveSettings).
+
+> 📋 Security & vulnerability-reporting policy — [SECURITY.md](SECURITY.md).
+
+### Support
+
+Official releases are maintained by the Delivery Auto IT team. Support channels and scope (including best-effort for forks) — see [SUPPORT.md](SUPPORT.md).
 
 ### Customization
 
