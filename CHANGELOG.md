@@ -3,6 +3,19 @@
 All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.0.3] - 2026-07-21
+
+### Fixed
+- Any HTTP 2xx status code (e.g. 203 behind transforming corporate proxies)
+  is now treated as success — previously only 200 was accepted
+  (object module request engine + inline cookie-login checks on managed forms).
+
+### Added
+- **"Діагностика конфігурації"** button on both settings forms: scans the
+  configuration metadata (candidate documents with attributes and tabular
+  sections, counterparty catalogs) and produces a report for support —
+  speeds up adding official support for new configurations (e.g. BAS KUP).
+
 ## [1.0.2] - 2026-06-01
 
 ### Added
