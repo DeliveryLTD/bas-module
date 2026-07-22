@@ -3,6 +3,14 @@
 All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.0.4] - 2026-07-23
+
+### Added
+- **Cargo valuation field** ("Оцінка вантажу") on the managed create-waybill form.
+  It sets `InsuranceValue`, so insurance is now calculated correctly — previously
+  the declared value was always sent as 0. Placed in a dedicated "Страхування"
+  section, visually separated from the cash-on-delivery "Сума" field to avoid confusion.
+
 ## [1.0.3] - 2026-07-21
 
 ### Fixed
