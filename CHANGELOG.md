@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- **Date validation** on both create-waybill forms: the pickup date cannot be later
+  than the dispatch date, and neither date can be in the past (same day is allowed).
+  Checked both on submit and right after the date is entered, so the user is warned
+  immediately.
 - Cargo valuation field ("Оцінка вантажу") on the **regular** create-waybill form
   (previously only on the managed one). It now feeds `InsuranceValue` both when
   creating a waybill and when calculating the price, and is combined with the
