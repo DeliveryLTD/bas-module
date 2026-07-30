@@ -3,9 +3,19 @@
 All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
-## [Unreleased]
+## [1.1.0] - 2026-07-30
 
 ### Added
+- **Tariff type selection ("Тип тарифу") per cargo unit** on both create-waybill
+  forms — regular cargo plus four pallet types (Euro pallet, Americana-1,
+  Americana-2, half-pallet). Pallets are sent with `mainCategoryId: 75` as required
+  by the Delivery API; regular cargo keeps the previous payload unchanged.
+- **Weight limit validation for special tariffs.** Limits are fetched live from the
+  API (`GetTariffCategory`) and fall back to a built-in table when the API is
+  unreachable, so new limits are picked up automatically without updating the
+  processor. The user gets a clear message instead of the backend silently
+  substituting the weight — e.g. *"Для тарифу «Європалета» вага має бути не менше
+  60 кг (вказано 11)"*. Applied both when creating and when calculating the price.
 - **Date validation** on both create-waybill forms: the pickup date cannot be later
   than the dispatch date, and neither date can be in the past (same day is allowed).
   Checked both on submit and right after the date is entered, so the user is warned
@@ -14,6 +24,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
   (previously only on the managed one). It now feeds `InsuranceValue` both when
   creating a waybill and when calculating the price, and is combined with the
   cash-on-delivery amount (the larger of the two is sent).
+
+### Changed
+- Error messages now include a hint when the API rejects the recipient: check the
+  recipient's full name for typos and use the local phone format `0XXXXXXXXX`.
 
 ## [1.0.4] - 2026-07-23
 
