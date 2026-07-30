@@ -3,6 +3,15 @@
 All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.1.1] - 2026-07-31
+
+### Added
+- **Payer selection** ("Платник") on both create-waybill forms: sender or recipient.
+  Previously the sender was always the payer with no way to change it. When the
+  recipient pays, `payerType` is set to 1 and the payer id is omitted so the API
+  resolves it from the recipient data. Defaults to sender, so existing behaviour
+  is unchanged.
+
 ## [1.1.0] - 2026-07-30
 
 ### Added
