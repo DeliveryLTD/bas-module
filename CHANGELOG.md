@@ -3,6 +3,16 @@
 All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.1.2] - 2026-08-03
+
+### Added
+- **Payment method selection** ("Вид оплати") on both create-waybill forms:
+  cash or bank transfer. Previously cash was always sent with no way to change it.
+  When the recipient pays, bank transfer requires the recipient to be a legal
+  entity — otherwise the module explains this before sending.
+- The price calculation on the regular form now also sends the payer and the
+  payment method, so the estimate matches the actual waybill.
+
 ## [1.1.1] - 2026-07-31
 
 ### Added
